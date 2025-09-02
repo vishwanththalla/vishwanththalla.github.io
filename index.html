@@ -5,20 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vishwanth Thalla | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-md fixed top-0 w-full z-10">
+  <nav class="bg-white shadow-md fixed top-0 w-full z-20">
     <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
       <h1 class="text-xl font-bold text-indigo-600">Vishwanth Thalla</h1>
-      <div class="space-x-6">
+      <div class="hidden md:flex space-x-6">
         <a href="#about" class="hover:text-indigo-600">About</a>
         <a href="#experience" class="hover:text-indigo-600">Experience</a>
         <a href="#skills" class="hover:text-indigo-600">Skills</a>
         <a href="#education" class="hover:text-indigo-600">Education</a>
         <a href="#contact" class="hover:text-indigo-600">Contact</a>
       </div>
+      <button id="menu-btn" class="md:hidden text-indigo-600 focus:outline-none">
+        ☰
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+      <a href="#about" class="block px-4 py-2 hover:bg-gray-100">About</a>
+      <a href="#experience" class="block px-4 py-2 hover:bg-gray-100">Experience</a>
+      <a href="#skills" class="block px-4 py-2 hover:bg-gray-100">Skills</a>
+      <a href="#education" class="block px-4 py-2 hover:bg-gray-100">Education</a>
+      <a href="#contact" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
     </div>
   </nav>
 
@@ -110,6 +124,13 @@
   <footer class="bg-gray-900 text-white text-center py-6">
     <p>&copy; 2025 Vishwanth Thalla. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
